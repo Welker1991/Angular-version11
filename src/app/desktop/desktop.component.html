@@ -1,0 +1,95 @@
+<router-outlet>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home">Selfit Academias</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="/listar-totem">Totem</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/listar-laptop">Laptop</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/listar-tablet">Tablet/Ipad</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/listar-celular">Celular</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/atualizar-desktop">Atualizar Desktop</a>
+          </li>
+          <li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/cadastrar-desktop">Cadastrar Desktop</a>
+          </li>
+
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="buscar" placeholder="Buscar" aria-label="Buscar"
+          [(ngModel)]="filter" />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+      </div>
+
+  </nav>
+
+  <div class="py-5 text-center">
+      <h2>Lista de Desktops</h2>
+  </div>
+
+<!-- <nav class="navbar">
+  <input class="form-control" type="text" name="search" [(ngModel)]="filter" />
+</nav> -->
+<table class="table table-striped">
+
+  <thead class="cabecalho">
+      <tr>
+          <th class="identificadorh">Número do Ativo</th>
+          <th>Id</th>
+          <th>Unidade</th>
+          <th>Usuario</th>
+          <th>Serial</th>
+          <th>Fabricante</th>
+          <th>Modelo</th>
+          <th>Espaço em Disco</th>
+          <th>Processador</th>
+          <th>Memória</th>
+          <th>Sistema Operacional</th>
+          <th>Versão do Sistema</th>
+          <th>Arquitetura</th>
+          <th>Estado do Ativo</th>
+          <th>Observações</th>
+          <th>Data de Adição</th>
+          <th>Ações</th>
+      </tr>
+  </thead>
+
+  <tbody class="body">
+      <tr *ngFor="let desktop of desktops | filter: filter">
+          <td class="identificadorb">{{desktop.numeroDoAtivo}}</td>
+          <td>{{desktop.id}}</td>
+          <td>{{desktop.unidade}}</td>
+          <td>{{desktop.usuario}}</td>
+          <td>{{desktop.serial}}</td>
+          <td>{{desktop.fabricante}}</td>
+          <td>{{desktop.modelo}}</td>
+          <td>{{desktop.espacoEmDisco}}</td>
+          <td>{{desktop.processador}}</td>
+          <td>{{desktop.memoria}}</td>
+          <td>{{desktop.sistemaOperacional}}</td>
+          <td>{{desktop.versaoSistema}}</td>
+          <td>{{desktop.arquiterura}}</td>
+          <td>{{desktop.estadoDoAtivo}}</td>
+          <td>{{desktop.observacao}}</td>
+          <td>{{desktop.dataDeAdicao | date: 'dd/MM/yyyy HH:mm'}}</td>
+          <td><button (click)="remover(desktop.id)">Remover</button></td>
+      </tr>
+  </tbody>
+
+</table>
+</router-outlet>

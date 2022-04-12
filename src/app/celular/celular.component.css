@@ -1,0 +1,32 @@
+.cabecalho {
+  font-size: small;
+  white-space: nowrap;
+  text-align: center;
+  border-collapse: separate;
+  background-color: #831D1C;
+  color: #FFF;
+}
+
+.body {
+  font-size: small;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.text-center {
+
+  margin-top: 40px;
+}
+
+.header {
+  background-color: #831D1C;
+  color: #FFF;
+}
+
+.identificadorh {
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #831D1C;
+}
