@@ -2,7 +2,7 @@ import { Component, Injectable, OnInit } from '@angular/core';
 import { TotemService } from './totem.component.services';
 
 @Component({
-  selector: 'app-totems',
+  selector: 'app-totem',
   templateUrl: './totem.component.html',
   styleUrls: ['./totem.component.css']
 })
@@ -15,8 +15,7 @@ export class TotemComponent implements OnInit {
   totemService: TotemService;
   totems: Array<any> = new Array();
   filter?: any;
-  totem: any;
-  id: any;
+
 
   constructor(totemService: TotemService) {
     this.totemService = totemService;
@@ -27,7 +26,7 @@ export class TotemComponent implements OnInit {
   }
 
   listar(): void {
-    this.totemService.getTotems().subscribe(data => this.totem = data);
+    this.totemService.getTotems().subscribe(data => this.totems = data);
   }
 
   remover(id: any) {

@@ -2,11 +2,9 @@
   background-color: #831D1C;
 }
 
-.button {
+.container_button {
+  float: left;
   width: 100%;
-  height: 50px;
-  opacity: .5;
-
+  margin-top: 15px;;
 }
-
 

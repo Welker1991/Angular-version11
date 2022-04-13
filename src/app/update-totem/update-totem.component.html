@@ -153,15 +153,15 @@
                   [(ngModel)]="totem.observacao" />
           </div>
 
+          <div class="container_button">
+            <div class="col end center text-right" >
+              <button button class="button" class="btn btn-primary me-md-2" type="submit" class="btn btn-primary"
+              [disabled]="frm.invalid">Salvar</button>
+             </div>
+          </div>
+
 
       </form>
-      <br>
-      <div class="container_button">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end" >
-          <button class="button" class="btn btn-primary me-md-2" type="submit" class="btn btn-primary"
-              [disabled]="frm.invalid">Salvar</button>
-        </div>
-      </div>
 
   </div>
 </router-outlet>

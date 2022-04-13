@@ -129,14 +129,16 @@
             <input type="text" id="observacao" name="observacao" class="form-control" placeholder=""
             [(ngModel)]="desktop.observacao" />
           </div>
-      </form>
-      <br>
-      <div class="container_button">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end" >
-          <button class="button" class="btn btn-primary me-md-2" type="submit" class="btn btn-primary"
+
+
+          <div class="container_button">
+            <div class="col end center text-right" >
+              <button button class="button" class="btn btn-primary me-md-2" type="submit" class="btn btn-primary"
               [disabled]="frm.invalid">Salvar</button>
-        </div>
-      </div>
+             </div>
+          </div>
+      </form>
+
 
   </div>
 </router-outlet>
